@@ -30,9 +30,9 @@ function Sidebar({
   ];
 
   const actionButtons = [
-    { name: "Add Task", icon: <FaPlus className={commonIconClass} />, onClick: () => setShowAddTask(true), color: "blue" },
-    { name: "Add Dept", icon: <FaBuilding className={commonIconClass} />, onClick: () => setShowAddDepartment(true), color: "green" },
-    { name: "Add Schedule", icon: <FaCalendarAlt className={commonIconClass} />, onClick: () => setShowAddSchedule(true), color: "purple" }, 
+    { name: "Add Task", icon: <FaPlus className={commonIconClass} />, onClick: () => setShowAddTask(true), color: "bg-blue-500",hover:"bg-blue-600" },
+    { name: "Add Dept", icon: <FaBuilding className={commonIconClass} />, onClick: () => setShowAddDepartment(true), color: "bg-green-500",hover:"bg-green-600" },
+    { name: "Add Schedule", icon: <FaCalendarAlt className={commonIconClass} />, onClick: () => setShowAddSchedule(true), color: "bg-purple-500",hover:"bg-purple-600" }, 
   ];
 
   return (
@@ -99,7 +99,7 @@ function Sidebar({
                 w-full py-3 px-4 rounded-lg flex items-center justify-center space-x-3
                 text-white font-medium
                 transition duration-200 ease-in-out
-                bg-${button.color}-500 hover:bg-${button.color}-600 shadow-md
+                ${button.color}  hover:${button.hover} shadow-md
               `}
             >
               {button.icon}

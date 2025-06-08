@@ -36,28 +36,28 @@ function AnalyticsView({
       title: "Total Patients",
       value: hospitalStats.totalPatients,
       icon: <FaUserInjured className="text-blue-500 text-xl" />,
-      color: "blue",
+      color: "bg-blue-100",
       trend: { value: 4.5, up: true, icon: <FaArrowUp className="mr-2" /> },
     },
     {
       title: "Available Beds",
       value: hospitalStats.availableBeds,
       icon: <FaBed className="text-green-500 text-xl" />,
-      color: "green",
+      color: "bg-green-100",
       trend: { value: 2.1, up: false, icon: <FaArrowDown className="mr-2" /> },
     },
     {
       title: "Staff on Duty",
       value: hospitalStats.staffOnDuty,
       icon: <FaUserMd className="text-purple-500 text-xl" />,
-      color: "purple",
+      color: "bg-purple-100",
       trend: { value: 1.2, up: true, icon: <FaArrowUp className="mr-2" /> },
     },
     {
       title: "Emergency Cases",
       value: hospitalStats.emergencyCases,
       icon: <FaAmbulance className="text-red-500 text-xl" />,
-      color: "red",
+      color: "bg-red-100",
       trend: { value: 3.2, up: true, icon: <FaArrowUp className="mr-2" /> },
     },
   ];
@@ -197,7 +197,7 @@ function AnalyticsView({
                   {stat.value}
                 </p>
               </div>
-              <div className={`p-3 bg-${stat.color}-100 rounded-full`}>
+              <div className={`p-3 ${stat.color} rounded-full`}>
                 {stat.icon}
               </div>
             </div>
