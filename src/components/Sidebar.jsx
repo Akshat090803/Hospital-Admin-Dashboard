@@ -71,7 +71,7 @@ function Sidebar({
           {navItems.map((item) => (
             <button
               key={item.tab}
-              onClick={() => setActiveTab(item.tab)}
+              onClick={() => {setActiveTab(item.tab); setSidebarOpen(false)}}
               className={`
                 w-full text-left py-3 px-5 rounded-lg flex items-center space-x-4
                 transition-all duration-200 ease-in-out
